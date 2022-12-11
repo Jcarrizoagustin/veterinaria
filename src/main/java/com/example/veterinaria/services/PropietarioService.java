@@ -3,7 +3,7 @@ package com.example.veterinaria.services;
 import com.example.veterinaria.dtos.propietario.PropietarioCreationDTO;
 import com.example.veterinaria.dtos.propietario.PropietarioResponseDTO;
 import com.example.veterinaria.entities.Propietario;
-import com.example.veterinaria.exceptions.handlers.PropietarioNotExistException;
+import com.example.veterinaria.entities.handlers.PropietarioNotExistException;
 import com.example.veterinaria.mappers.PropietarioMapper;
 import com.example.veterinaria.repositories.PropietarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -3,7 +3,7 @@ package com.example.veterinaria.controllers;
 import com.example.veterinaria.dtos.mascota.MascotaCreationDTO;
 import com.example.veterinaria.dtos.mascota.MascotaResponseDTO;
 import com.example.veterinaria.entities.Mascota;
-import com.example.veterinaria.exceptions.handlers.MascotaNotExistException;
+import com.example.veterinaria.entities.handlers.MascotaNotExistException;
 import com.example.veterinaria.mappers.MascotaMapper;
 import com.example.veterinaria.services.MascotaService;
 import org.springframework.beans.factory.annotation.Autowired;

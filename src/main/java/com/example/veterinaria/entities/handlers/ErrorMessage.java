@@ -1,4 +1,4 @@
-package com.example.veterinaria.exceptions.handlers;
+package com.example.veterinaria.entities.handlers;
 
 public class ErrorMessage {
     private String exception;

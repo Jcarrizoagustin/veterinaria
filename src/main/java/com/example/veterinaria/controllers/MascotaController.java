@@ -3,7 +3,7 @@ package com.example.veterinaria.controllers;
 import com.example.veterinaria.dtos.mascota.MascotaCreationDTO;
 import com.example.veterinaria.dtos.mascota.MascotaResponseDTO;
 import com.example.veterinaria.entities.Mascota;
-import com.example.veterinaria.entities.handlers.MascotaNotExistException;
+import com.example.veterinaria.entities.handlers.EntityNotExistException;
 import com.example.veterinaria.mappers.MascotaMapper;
 import com.example.veterinaria.services.MascotaService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,7 +34,7 @@ public class MascotaController {
         if(mascota.isPresent()){
             return ResponseEntity.ok(mapper.mascotaToMascotaResponseDTO(mascota.get()));
         }else{
-            throw new MascotaNotExistException("id: "+ id);
+            throw new MascotaNot
         }
     }
 
@@ -51,7 +51,7 @@ public class MascotaController {
         if(service.eliminarMascota(id)){
             return ResponseEntity.ok().build();
         }else{
-            throw new MascotaNotExistException("id: "+id);
+            throw new EntityNotExistException("No existe");
         }
     }
 }

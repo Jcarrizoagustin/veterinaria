@@ -5,9 +5,7 @@ import lombok.Setter;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.LocalTime;
 
 @Entity
 public class Turno {
@@ -19,11 +17,7 @@ public class Turno {
 
     @DateTimeFormat(pattern = "dd-MM-yyyy HH:mm", iso = DateTimeFormat.ISO.DATE_TIME)
     @Getter @Setter
-    private LocalDate fecha;
-
-    @DateTimeFormat(pattern = "HH:mm",iso = DateTimeFormat.ISO.TIME)
-    @Getter @Setter
-    private LocalTime hora;
+    private LocalDateTime fecha;
 
     @ManyToOne
     @JoinColumn(name = "fk_mascota",referencedColumnName = "id_mascota")

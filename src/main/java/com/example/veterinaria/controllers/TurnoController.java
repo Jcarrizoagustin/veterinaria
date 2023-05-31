@@ -3,9 +3,10 @@ package com.example.veterinaria.controllers;
 import com.example.veterinaria.dtos.turno.TurnoCreationDTO;
 import com.example.veterinaria.dtos.turno.TurnoResponseDTO;
 import com.example.veterinaria.entities.Turno;
-import com.example.veterinaria.entities.handlers.NotFoundException;
+import com.example.veterinaria.exceptions.handlers.NotFoundException;
 import com.example.veterinaria.mappers.TurnoMapper;
 import com.example.veterinaria.services.TurnoService;
+import net.bytebuddy.asm.Advice;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;
@@ -13,6 +14,8 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.List;
 
 @RestController
@@ -38,7 +41,8 @@ public class TurnoController {
 
     @GetMapping("/dia")
     public ResponseEntity<List<TurnoResponseDTO>> turnosDelDia(@RequestParam(value = "fecha") @DateTimeFormat(pattern = "dd-MM-yyyy",iso = DateTimeFormat.ISO.DATE) LocalDate dia){
-        List<Turno> turnosList = service.turnosDelDia(dia);
+        LocalDateTime diaF = LocalDateTime.of(dia, LocalTime.of(17,55));
+        List<Turno> turnosList = service.turnosDelDia(diaF);
         if(turnosList.isEmpty()){
             throw new NotFoundException("No existen turnos para: " + dia.toString());
         }

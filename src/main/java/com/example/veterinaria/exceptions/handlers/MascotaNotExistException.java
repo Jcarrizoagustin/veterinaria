@@ -1,4 +1,4 @@
-package com.example.veterinaria.entities.handlers;
+package com.example.veterinaria.exceptions.handlers;
 
 public class MascotaNotExistException extends NotFoundException{
     private static final String DESCRIPTION = "Mascota not exist";

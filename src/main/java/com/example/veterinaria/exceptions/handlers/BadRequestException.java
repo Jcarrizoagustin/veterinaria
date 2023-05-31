@@ -1,4 +1,4 @@
-package com.example.veterinaria.entities.handlers;
+package com.example.veterinaria.exceptions.handlers;
 
 public class BadRequestException extends RuntimeException{
     private static final String DESCRIPTION = "Bad Request Exception (400)";

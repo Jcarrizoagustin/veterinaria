@@ -1,4 +1,4 @@
-package com.example.veterinaria.entities.handlers;
+package com.example.veterinaria.exceptions.handlers;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.FieldError;

@@ -3,7 +3,7 @@ package com.example.veterinaria.controllers;
 import com.example.veterinaria.dtos.especie.EspecieCreationDTO;
 import com.example.veterinaria.dtos.especie.EspecieDTO;
 import com.example.veterinaria.entities.Especie;
-import com.example.veterinaria.entities.handlers.BadRequestException;
+import com.example.veterinaria.exceptions.handlers.BadRequestException;
 import com.example.veterinaria.mappers.EspecieMapper;
 import com.example.veterinaria.services.EspecieService;
 import org.springframework.beans.factory.annotation.Autowired;

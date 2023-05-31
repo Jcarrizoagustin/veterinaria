@@ -4,7 +4,7 @@ import com.example.veterinaria.dtos.raza.RazaCreationDTO;
 import com.example.veterinaria.dtos.raza.RazaResponseDTO;
 import com.example.veterinaria.entities.Especie;
 import com.example.veterinaria.entities.Raza;
-import com.example.veterinaria.entities.handlers.EspecieEntityNotExist;
+import com.example.veterinaria.exceptions.handlers.EspecieEntityNotExist;
 import com.example.veterinaria.services.EspecieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
